@@ -3,53 +3,53 @@
 Group no.: 148
 
 #### Team members:
-- Liu Lihua (3035690593)
-- Jiang Xingjian (3035637759)
+- Liu Lihua
+- Jiang Xingjian
 
-#### A game description whith game rule:
-This game is an RPG game, in which player will act as an adventurer and try to defeat the monsters during the adventure. 
-Player will have Hit Point (HP), Mana Point (MP) and Experience (EXP). Before the adventure, player can choose his skill from a given skill list. During the battle, player and monster will take turns taking action. In player’s turn, player have 3 choices: normal attack (cause a small amount of damage and won’t consume MP), rest (recover some MP), and using skill (consume MP, will cause lots of damage or recover some HP). After the battle, player will get EXP and choose to recover part of HP or MP. If player’s HP become less than 0, the adventure will end as a failure. After some battles, the adventure will end as a success.
+#### A game description with game rules:
+This is an RPG game in which the player acts as an adventurer and tries to defeat monsters throughout the adventure. 
+The player will have Hit Points (HP), Mana Points (MP), and Experience (EXP). Before the adventure, the player can choose their skill from a given skill list. During the battle, the player and monster will take turns taking action. In the player’s turn, the player has 3 choices: normal attack (causes a small amount of damage and does not consume MP), rest (recovers some MP), and using skill (consumes MP, will cause lots of damage or recovers some HP). After the battle, the  player will get EXP and choose to recover part of their HP or MP. If the player’s HP becomes less than 0, the adventure will end as a failure. After some battles, the adventure will end as a success.
 
-#### A list of features / functions to implement:
+#### A list of features/functions to implement:
 
 1. Insert player's name
-  - Ask for player's name and initialize player's HP (500) and MP (0). Then store name, HP, and MP into "player.txt".
+  - Ask for the player's name and initialize the player's HP (500) and MP (0). Then store name, HP, and MP into "player.txt".
 - File input/output:
-  - Store players name in a file of player status. 
+  - Store the player's name in a file of player status. 
 
 2. Display stage status
-  - Display status of player and monster in stages and rounds.
+  - Display the status of the player and the monster in stages and rounds.
 - File input/output:
-  - Get the Hp and name of the monster,display from a file with monsters' status according to different game stages.
-  - Get the Hp and Mp, display from a file with player's status.
+  - Get the Hp and name of the monster, display from a file with monsters' status according to different game stages.
+  - Get the Hp and Mp, display from a file with the player's status.
   - Read the player and monster to determine the winner of the battle.
 - Data structures for storing game status:
-  - Use string array to store hp and attack power of every monster temporary.
+  - Use a string array to store the HP and attack power of every monster temporarily.
 - Program codes in multiple files:
-  - Display function will be stored in another file to be reused while the main function will run the battle. 
+  - The display function will be stored in another file to be reused, while the main function will run the battle. 
 - Dynamic memory management:
-  - Release the storage of the array of monsters data after displayed. Only store the data of current stage's monster. 
+  - Release the storage of the array of monsters data after displayed. Only store the data of the current stage's monster. 
 
 3. Insert player's move
-  - Player will choose between normal attack,rest and recover and skill attack by input certain data. 
-  - Depending on player's MP, recover and skill attack may be unavailable.
+  - Player will choose between normal attack, rest, recover, and skill attack by inputting certain data. 
+  - Depending on the player's MP, recover and skill attack may be unavailable.
 - Data structures for storing game status:
-  - May change the hp of a monster and store in the array. 
-  - May change the mp and hp of player and store in the array. 
+  - May change the hp of a monster and store it in the array. 
+  - May change the mp and hp of the player and store in the array. 
 
-4. Generate monster's move
+4. Generate the monster's move
 - Generation of random game sets or events:
   - The monster will randomly choose a move. It will also choose skills when it has enough MP.
 - Data structures for storing game status:
-  - Will change the hp of player and store in the file after a stage.  
-- If player's Hp drop to 0, player will lose.
-- If player kills all monsters, player wins. 
+  - Will change the hp of the player and store it in the file after a stage.  
+- If the player's Hp drop to 0, the player will lose.
+- If the player kills all monsters, the player wins. 
 5. Data validation
 - The program will require the user input the data again if the previously input data is out of the given range.
 - The program will require the user choose the action again if some conditions of the previous choice aren't satisfied.
 
 6. Play again
-- After a game, the player can choose to play the whole game again, or exit the game.
+- After a game, the player can choose to play the whole game again or exit the game.
 - Choose 1 to play again and 2 to exit. 
 
 #### non-standard C/C++ libraries: 
